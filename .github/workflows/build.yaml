@@ -1,0 +1,30 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - "*"
+      - "!master"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download sources
+        uses: actions/checkout@v2
+
+      - name: Set up environment
+        run: npm install -g @angular/cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Build
+        run: npm run build
+
+      - name: Lint
+        run: ng lint
+      
+      - name: Tests
+        run: ng test --sourceMap=false --browsers=ChromeHeadless --watch=false
