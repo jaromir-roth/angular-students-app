@@ -4,8 +4,14 @@ module.exports = {
     enabled: true,
     content: ['./src/**/*.{html,ts}']
   },
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
+    fontFamily: {
+      sans: ['Rubik', 'sans-serif']
+    },
+    boxShadow: {
+      xl: '0 20px 30px -20px rgba(34, 29, 109, 0.1)'
+    },
     extend: {},
   },
   variants: {
