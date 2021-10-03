@@ -15,7 +15,9 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      boxShadow: ['active'],
+    },
   },
   plugins: [],
 }
