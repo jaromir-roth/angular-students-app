@@ -1,0 +1,28 @@
+table {
+  text-align: left;
+  vertical-align: top;
+  @apply text-sm;
+
+  thead {
+    tr {
+      th {
+        @apply py-5;
+        @apply text-xs;
+        @apply border-b border-gray-100;
+      }
+    }
+  }
+
+  tbody {
+    tr {
+      td {
+        @apply py-4;
+        @apply border-b border-gray-100;
+
+        small {
+          @apply text-gray-400;
+        }
+      }
+    }
+  }
+}
