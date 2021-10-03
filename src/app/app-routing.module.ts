@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 import { LayoutComponent } from './modules/core/components/layout/layout.component';
+import { NotFoundPageComponent } from './modules/core/pages/not-found-page/not-found-page.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,11 @@ const routes: Routes = [
       {
         path: 'students',
         loadChildren: () => import('./modules/students/students.module').then((m) => m.StudentsModule),
+      },
+      {
+        path: '**',
+        component: NotFoundPageComponent,
+        data: { title: '404' },
       },
     ],
   },
