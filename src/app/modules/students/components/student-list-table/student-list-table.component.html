@@ -1,0 +1,37 @@
+<table *ngIf="students?.length; else noStudents" class="w-full">
+  <thead>
+    <tr>
+      <th>Příjmení jméno</th>
+      <th>Kontakt</th>
+      <th>Datum narození</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let student of students; trackBy: trackBy">
+      <td>
+        <div class="flex items-center">
+          <app-avatar [initials]="student.initials" class="mr-5 hidden sm:flex"></app-avatar>
+          <div>
+            <span class="text-sm sm:text-base">{{ student.surname }} {{ student.name }}</span>
+            <br> 
+            <small>#{{ student.id }}</small>
+          </div>
+        </div>
+      </td>
+      <td>
+        <small class="mr-2 hidden sm:inline-flex">📭</small> {{ student.email }} <br>
+        <small class="mr-2 hidden sm:inline-flex">📞</small> {{ student.phone }}
+      </td>
+      <td>
+        {{ student.birthDate | dateFormat: 'D.M.yyyy'}}
+        <br> 
+        <small>{{ student.birthDate | age }}</small>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<ng-template #noStudents>
+  <p class="text-center mt-6">Nebyli nalezeni žádní studenti...</p>
+</ng-template>
+

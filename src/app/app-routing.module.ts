@@ -6,7 +6,18 @@ import { LayoutComponent } from './modules/core/components/layout/layout.compone
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'students',
+    pathMatch: 'full',
+  },
+  {
+    path: '',
     component: LayoutComponent,
+    children: [
+      {
+        path: 'students',
+        loadChildren: () => import('./modules/students/students.module').then((m) => m.StudentsModule),
+      },
+    ],
   },
 ];
 
