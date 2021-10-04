@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { ButtonComponent } from './components/button/button.component';
+import { InputComponent } from './components/input/input.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 import { AgePipe } from './pipes/age.pipe';
 import { DateFormatPipe } from './pipes/date-format.pipe';
@@ -11,6 +13,8 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
   declarations: [
     AvatarComponent,
     ButtonComponent,
+    InputComponent,
+    SpinnerComponent,
     AgePipe,
     DateFormatPipe,
   ],
@@ -20,6 +24,8 @@ import { DateFormatPipe } from './pipes/date-format.pipe';
   exports: [
     AvatarComponent,
     ButtonComponent,
+    InputComponent,
+    SpinnerComponent,
     AgePipe,
     DateFormatPipe,
   ],

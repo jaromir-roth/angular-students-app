@@ -1,3 +1,4 @@
-<button class="bg-indigo-500 text-white text-xs uppercase tracking-wide font-bold px-10 py-4 rounded-md hover:bg-indigo-400 active:bg-indigo-500">
+<button [disabled]="disabled" class="inline-flex items-center bg-indigo-500 text-white text-xs uppercase tracking-wide font-bold px-10 h-12 rounded-md hover:bg-indigo-400 active:bg-indigo-500">
+  <app-spinner *ngIf="loading"></app-spinner>
   <ng-content></ng-content>
 </button>
