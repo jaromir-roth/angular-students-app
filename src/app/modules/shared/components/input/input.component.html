@@ -1,0 +1,20 @@
+
+<label class="flex flex-col">
+  <span *ngIf="label" class="block uppercase text-xs font-bold mb-2">
+    {{ label }}
+    <span *ngIf="required" class="text-red-600 text-base">*</span>
+  </span>
+  <input 
+    #input
+    [type]="type"
+    [placeholder]="placeholder"
+    [value]="value"
+    [disabled]="disabled"
+    [min]="min"
+    [max]="max"
+    (input)="onChange(input.value)"
+    (blur)="onTouched()"
+    class="w-full border border-gray-300 rounded px-4 h-12"
+    [class.border-red-500]="ngControl.invalid && (ngControl.dirty || ngControl.touched)"
+  />
+</label>

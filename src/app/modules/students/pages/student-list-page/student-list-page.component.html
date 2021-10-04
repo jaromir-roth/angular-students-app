@@ -1,7 +1,7 @@
 <div *ngIf="students; else loading" class="flex flex-col items-center">
   <app-student-list-filter class="mb-4 max-w-sm w-full" (inputChanged)="filterStudents($event)"></app-student-list-filter>
   <app-student-list-table [students]="students" class="w-full"></app-student-list-table>
-  <app-button class="mt-6 sm:mt-10">Přidat studenta</app-button>
+  <app-button [routerLink]="['add-new']" class="mt-6 sm:mt-10">Přidat studenta</app-button>
 </div>
 
 <ng-template #loading>
