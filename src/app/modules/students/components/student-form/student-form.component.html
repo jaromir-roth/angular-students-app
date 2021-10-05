@@ -2,7 +2,7 @@
   <!-- Base information -->
   <section class="flex flex-col mb-6">
     <h3>Základní údaje</h3>
-    <div class="grid grid-cols-3 gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
       <app-input type="text" label="Jméno" placeholder="Jméno" formControlName="name" [required]="true"></app-input>
       <app-input type="text" label="Příjmení" placeholder="Příjmení" formControlName="surname" [required]="true"></app-input>
       <app-input type="date" label="Datum narození" placeholder="Datum narození" formControlName="birthDate" [max]="minBirthDate" [required]="true"></app-input>
@@ -17,7 +17,7 @@
         Vyplňte minimálně jeden kontakt
       </small>
     </h3>
-    <div class="grid grid-cols-2 gap-3 w-full max-w-md">
+    <div class="grid  grid-cols-1 sm:grid-cols-2 gap-3 w-full sm:max-w-md">
       <app-input type="email" label="E-mail" placeholder="E-mail" formControlName="email"></app-input>
       <app-input type="text" label="Telefon" placeholder="Telefon" formControlName="phone"></app-input>
     </div>
