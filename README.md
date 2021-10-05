@@ -7,12 +7,12 @@ A simple web application built with Angular 12. The features of the project:
 
 
 <div style='text-align: center'>
-<img src="src/assets/screenshot.png" alt="Logo" style="max-width: 600px" width="100%" height="auto">
+<img src="src/assets/app-preview.gif" alt="Logo" style="max-width: 350px" width="100%" height="auto">
 </div>
 
 ## Live preview
 
-Visit the `https://jaromir-roth.github.io/angular-students-app/` to see the live preview of the application.
+Visit the [https://jaromir-roth.github.io/angular-students-app/](https://jaromir-roth.github.io/angular-students-app/) to see the live preview of the application.
 
 
 ## Development server
